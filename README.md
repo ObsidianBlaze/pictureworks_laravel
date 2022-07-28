@@ -8,4 +8,6 @@ php artisan migrate:fresh --seed
 
 ## Endpoints
 
-Get User: {{base_url}}/api/v1/user/{id}
+Get a single User: {{base_url}}/api/v1/user/{id}
+
+Update a users comment: {{base_url}}/api/v1/user/comment/{id}

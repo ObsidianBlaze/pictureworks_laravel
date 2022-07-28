@@ -19,4 +19,8 @@ Route::prefix('/user')->group(function () {
     //get user
     Route::get('/{id}', 'api\v1\UserController@getUser');
 
+    //update a users comment
+    Route::post('/comment/{id}', 'api\v1\UserController@update');
+
+
 });
