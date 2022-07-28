@@ -78,10 +78,10 @@ class UserController extends Controller
         //Checking if an id exist
         $user = User::find($id);
         if ($user) {
-            //updating the user comment
-            $user->comment = $request->comment;
 
-            //Updating the user comment
+            //updating the user comment using implode to seperate with white space
+            $user->comment = implode(" ",[$user->comment,$request->comment]);
+
             $user->save();
 
             //Response if user exists.
