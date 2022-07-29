@@ -12,3 +12,11 @@ Get a single User: {{base_url}}/api/v1/user/{id}
 
 Update a users comment: {{base_url}}/api/v1/user/comment/{id}
 BODY => password, comment
+
+## Command line usage
+
+php artisan user:comment {id}{comment}
+
+## Run test with below command
+
+./vendor/bin/phpunit
