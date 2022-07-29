@@ -23,8 +23,12 @@ Route::prefix('/user')->group(function () {
     //get user
     Route::get('/{id}', 'UserController@getUser');
 
+    //Get the update comment view
+    Route::get('/comment/{id}', 'UserController@commentView');
+
+
     //update a users comment
-    Route::post('/comment/{id}', 'UserController@update');
+    Route::post('/comment/{id}', 'UserController@update')->name('append_comment');
 
 
 });

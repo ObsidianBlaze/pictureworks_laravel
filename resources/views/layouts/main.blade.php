@@ -3,7 +3,9 @@
 
 <head>
 {{--    <title>User Card - <?=$user->name?></title>--}}
-    <title>User Card - Obsidian</title>
+    @foreach($data as $user)
+    <title>User Card - {{$user->name}}</title>
+    @endforeach
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="{{asset('res/css/main.css')}}"/>
