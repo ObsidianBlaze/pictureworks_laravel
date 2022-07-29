@@ -1,11 +1,10 @@
 <section id="main">
     <header>
-        <span class="avatar"><img src="{{asset('res/images/users/1.jpg')}}" alt="user image"/></span>
+        @foreach($data as $user)
+        <span class="avatar"><img src="{{asset('res/images/users/').'/'.$user->id. '.jpg'}}" alt="user image"/></span>
 
-
-{{--        <h1><?=$user->name?></h1>--}}
-        <h1>Danny</h1>
-{{--        <p><?=nl2br($user->comments)?></p>--}}
-        <p>Comment</p>
+        <h1>{{$user->name}}</h1>
+        <p>{{$user->comment}}</p>
+        @endforeach
     </header>
 </section>
