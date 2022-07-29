@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     //Home page
-    function home() {
+    public function home() {
 
         //Getting User Data for the first user.
         $data = User::all()->where('id','=',1);
@@ -16,5 +16,11 @@ class UserController extends Controller
         return view('welcome', compact('data'));
     }
 
+    //Getting a single user
+    public function getUser($id){
+        //Getting User Data for the first user.
+        $data = User::all()->where('id','=',$id);
 
+        return view('welcome', compact('data'));
+    }
 }

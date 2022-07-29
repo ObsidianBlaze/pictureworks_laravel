@@ -15,3 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 //Home Page
 Route::get('/', 'UserController@home');
+
+
+//Changing views to get different users
+Route::prefix('/user')->group(function () {
+
+    //get user
+    Route::get('/{id}', 'UserController@getUser');
+
+    //update a users comment
+    Route::post('/comment/{id}', 'UserController@update');
+
+
+});
+

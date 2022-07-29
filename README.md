@@ -1,27 +1,28 @@
 # Content
 
-Setup 
+[SETUP](#after-cloning-the-application-run-the-below-command-to-setup)
 
-API DOC 
+[API DOC](#link-to-the-postman-documentation)
 
-Terminal
+[Terminal](#command-line-usage)
 
-Test
+[Test](#run-test-with-below-command)
 
-Blade
+[Blade](#blade)
 
-Version
-
-## Link to the postman documentation
-
-<https://documenter.getpostman.com/view/10977711/UzXPxGMN>
+[Version](#version-note)
 
 ## After cloning the application, run the below command to setup
+
 composer install
 
 ## Run the command below to seed the users into the database
 
 php artisan migrate:fresh --seed
+
+## Link to the postman documentation
+
+<https://documenter.getpostman.com/view/10977711/UzXPxGMN>
 
 ## Endpoints
 
@@ -38,6 +39,13 @@ php artisan user:comment {id}{comment}
 
 ./vendor/bin/phpunit
 
+## Blade
+
+localhost:8000 => Homepage
+
+localhost:8000/user/{id} => Get User
+
+localhost:8000/user/comment/{id} => Update Comment
 
 ## Version NOTE
 
