@@ -2,23 +2,36 @@
 <html>
 
 <head>
-    <title>User Card - <?=$user->name?></title>
+{{--    <title>User Card - <?=$user->name?></title>--}}
+    <title>User Card - Obsidian</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="{{asset('public/test/css/main.css')}}"/>
+    <link rel="stylesheet" href="{{asset('res/css/main.css')}}"/>
     <noscript>
-        <link rel="stylesheet" href="{{asset('public/test/css/noscript.css')}}"/>
+        <link rel="stylesheet" href="{{asset('res/css/noscript.css')}}"/>
     </noscript>
 </head>
 
 <body class="is-preload">
 <div id="wrapper">
-    <section id="main">
-        <header>
-            <span class="avatar"><img src="images/users/<?=$user->id?>.jpg" alt=""/></span>
-            <h1><?=$user->name?></h1>
-            <p><?=nl2br($user->comments)?></p>
-        </header>
-    </section>
+
+    {{--    Main--}}
+    @include('layouts.body')
+
+    @yield('content')
+
+    @include('layouts.footer')
+    {{--    Footer--}}
 
 </div>
+
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function () {
+            document.body.className = document.body.className.replace(/\bis-preload\b/, '');
+        });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+</body>
+</html>
