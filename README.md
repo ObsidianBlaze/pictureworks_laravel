@@ -2,6 +2,9 @@
 
 <https://documenter.getpostman.com/view/10977711/UzXPxGMN>
 
+## After cloning the application, run the below command to setup
+composer install
+
 ## Run the command below to seed the users into the database
 
 php artisan migrate:fresh --seed
@@ -20,3 +23,9 @@ php artisan user:comment {id}{comment}
 ## Run test with below command
 
 ./vendor/bin/phpunit
+
+
+## Version NOTE
+
+Laravel version -8
+PHP version -7.3.29
